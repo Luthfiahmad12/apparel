@@ -51,6 +51,12 @@ new class extends Component {
                         {{ __('Fitur') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('paket')" :active="request()->routeIs('paket')" wire:navigate>
+                        {{ __('Paket') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

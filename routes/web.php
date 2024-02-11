@@ -2,6 +2,7 @@
 
 use App\Livewire\Pages\Dashboard;
 use App\Livewire\Pages\Fitur;
+use App\Livewire\Pages\Paket;
 use App\Livewire\Pages\Rekening;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard', Dashboard::class)->name('dashboard');
     Route::get('rekening', Rekening::class)->name('rekening');
     Route::get('fitur', Fitur::class)->name('fitur');
+    Route::get('paket', Paket::class)->name('paket');
     Route::view('profile', 'profile')->name('profile');
 });
 

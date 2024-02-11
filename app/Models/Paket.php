@@ -4,16 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Fitur extends Model
+class Paket extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function paket(): BelongsTo
+    public function fitur(): HasMany
     {
-        return $this->belongsTo(Paket::class);
+        return $this->hasMany(Fitur::class);
     }
 }
